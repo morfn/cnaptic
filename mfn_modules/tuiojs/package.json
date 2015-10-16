@@ -1,0 +1,18 @@
+{
+  "name": "tuiojs",
+  "version": "0.0.1",
+  "author": {
+    "name": "Didier Cabrera",
+    "email": "didier@morfn.com"
+  },
+  "keywords": [
+    "osc",
+    "open sound control",
+    "tuio"
+  ],
+  "main": "index.js",
+  "description": "Tuiojs is a TUIO implementation in JavaScript",
+  "dependencies": {
+    "omgosc": "^1.0.0"
+  }
+}
