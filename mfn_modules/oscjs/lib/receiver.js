@@ -19,7 +19,7 @@ module.exports = {
 		return buffer.toString('ascii', start, end);
 	},	
 	readBlob:function (buffer, start) {
-		var len = readInt(buffer, start);
+		var len = this.readInt(buffer, start);
 		start += 4;
 		return buffer.slice(start, start+len);
 	},
