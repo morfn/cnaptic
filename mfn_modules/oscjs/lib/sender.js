@@ -51,13 +51,13 @@ module.exports = {
 	    octets.push(0);
 	  }
 	},
-	appendInt:function (octets, val,data_view) {
+	appendInt:function (octets, val) {
 	  data_view.setInt32(0, val, false);
 	  for (var i = 0; i < 4; ++i) {
 	    octets.push(data_view.getUint8(i));
 	  }
 	},
-	appendFloat:function (octets, val,data_view) {
+	appendFloat:function (octets, val) {
 	  data_view.setFloat32(0, val, false);
 	  for (var i = 0; i < 4; ++i) {
 	    octets.push(data_view.getUint8(i));
@@ -73,5 +73,5 @@ module.exports = {
 	    for (var i = 0; i < num_nulls; ++i) {
 	      octets.push(0);
 	    }
-  }
+  	} 	
 }
