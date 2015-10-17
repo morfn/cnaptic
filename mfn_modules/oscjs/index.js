@@ -34,7 +34,7 @@ OSC.prototype.listen = function() {
 	    if (path === '#bundle') {
 	      pos += 8;  // Skip timetag, treat everything as 'immediately'.
 	      while (pos < msg.length) {
-	        var len = readInt(msg, pos);
+	        var len = receiver.readInt(msg, pos);
 	        pos += 4;
 	        processMessageOrBundle(msg, pos);
 	        pos += len;
@@ -85,11 +85,11 @@ OSC.prototype.listen = function() {
 	}
 
 	udp.on('message', function(msg, rinfo) {
-		try {
+		// try {
 		  processMessageOrBundle(msg, 0);
-		} catch(e) {
-		  console.log('WARNING: Skipping OSC message, error: ' + e);
-		}
+		// } catch(e) {
+		  // console.log('WARNING: Skipping OSC message, error: ' + e);
+		// }
 	});
 
 	udp.bind(self.port);
