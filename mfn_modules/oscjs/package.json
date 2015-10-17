@@ -1,0 +1,8 @@
+{
+  "name": "oscjs",
+  "description": "JS implementation of OSC protocol",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": true,
+  "author": "Didier Cabrera"
+}
