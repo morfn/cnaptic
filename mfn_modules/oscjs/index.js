@@ -5,7 +5,7 @@ var events = require('events');
 var dgram = require('dgram');
 var udp = dgram.createSocket('udp4');
 
-function OSC ( host, port, opts ) {
+function OSC ( port,host, opts ) {
   this.host = host || "127.0.0.1";
   this.port = port || 3333;
   this.opts = opts || {};
@@ -22,7 +22,7 @@ OSC.prototype.send = function( path, typetag, params) {
 	udp.send(new Buffer(octets), 0, octets.length, self.port, self.host);
 };
 
-OSC.prototype.listen = function(first_argument) {
+OSC.prototype.listen = function() {
 	var self = this;
 	var udp = dgram.createSocket('udp4');
 
